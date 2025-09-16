@@ -38,3 +38,11 @@ int main() {
 
     return 0;
 }
+
+/*
+Sample Output: 
+10 5
+
+10 5 
+50
+*/
