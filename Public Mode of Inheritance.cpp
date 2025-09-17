@@ -1,3 +1,9 @@
+/*
+Sample Output: 
+Name : Dhakshayini Usha R
+PRN : 24070123039
+ENTC A2
+*/
 #include <iostream>
 using namespace std;
 
