@@ -241,25 +241,32 @@ Inheritance in C++ allows a class (derived class) to acquire properties and beha
 
 ### Hierarchical Inheritance
 ```
-+----------------+
-| Grandfather    |
-+----------------+
-        |
-        v
-+----------------+
-|    Father      |
-+----------------+
-        |
-        v
-+----------------+
-|    Child       |
-+----------------+
-        |
-        v
-+----------------+
-|      Main      |
-| disp() calls   |
-+----------------+
+                  ┌────────────────────────┐
+                  │        main()          │
+                  └───────────┬────────────┘
+                              │
+          ┌───────────────────┴───────────────────┐
+          │                                       │
+ ┌────────▼─────────┐                     ┌────────▼─────────┐
+ │ Create object w  │                     │ Create object m  │
+ │ (WashingMachine) │                     │ (Microwave)      │
+ └────────┬─────────┘                     └────────┬─────────┘
+          │                                       │
+ ┌────────▼─────────┐                     ┌────────▼─────────┐
+ │ Call setPrice()  │                     │ Call setPrice()  │
+ │ (from Appliance) │                     │ (from Appliance) │
+ └────────┬─────────┘                     └────────┬─────────┘
+          │                                       │
+ ┌────────▼─────────┐                     ┌────────▼─────────┐
+ │ Call Purpose()   │                     │ Call Purpose()   │
+ │ (WashingMachine) │                     │ (Microwave)      │
+ └────────┬─────────┘                     └────────┬─────────┘
+          │                                       │
+ ┌────────▼─────────┐                     ┌────────▼─────────┐
+ │ Call Purpose()   │                     │ Call Purpose()   │
+ │ (Appliance)      │                     │ (Appliance)      │
+ └──────────────────┘                     └──────────────────┘
+
 ```
 --- 
 
